@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_openFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="synchronize numbers"
+        android:onClick="openFile"
+        android:background="@color/buttonBackgroun"
+        android:layout_margin="5dp"
+        />
+
+    <Button
+        android:id="@+id/btn_allWeek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="show all weeks"
+        android:background="@color/buttonBackgroun"
+        android:layout_margin="5dp"
+        android:onClick="allWeeakList"/>
+
+    <Button
+        android:id="@+id/btn_frequentNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="most common numbers"
+        android:background="@color/buttonBackgroun"
+        android:layout_margin="5dp"
+        android:onClick="frequentNumbers"/>
+
+
+
+</LinearLayout>
