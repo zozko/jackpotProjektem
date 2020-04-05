@@ -69,8 +69,6 @@ public class MainActivity extends AppCompatActivity {
 
                 String[] szamokTombje = line.split(",");
 
-                // Log.d(TAG, "openFile: SZAMOK EGY SOR " + szamokTombje[0] + szamokTombje[1] + szamokTombje[2]);
-
                 hetenteKihuzva.setElso(Integer.parseInt(szamokTombje[0]));
                 hetenteKihuzva.setMasodik(Integer.parseInt(szamokTombje[1]));
                 hetenteKihuzva.setHarmadik(Integer.parseInt(szamokTombje[2]));
@@ -84,13 +82,15 @@ public class MainActivity extends AppCompatActivity {
                 //Log.d(TAG, "Listaba: " + hetenteKihuzva.toString());
             }
             reader.close();
+            Toast.makeText(this, "numbers are synced...", Toast.LENGTH_LONG).show();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            Log.e(TAG, "openFile: HIBA", e);
+            Toast.makeText(this, "please, enable storage permission!", Toast.LENGTH_LONG).show();
         } catch (IOException e) {
             Log.w(TAG, "openFile: " + "hiba a file beolvasasanal", e);
             e.printStackTrace();
         }
-        Toast.makeText(this, "numbers are synced...", Toast.LENGTH_LONG).show();
     }
 
     public void allWeeakList(View view) {

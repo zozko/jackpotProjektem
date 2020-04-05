@@ -46,7 +46,7 @@ public class NumberWinsTimesAdapter extends ArrayAdapter<Integer> {
         //kiiratas:
         number.setText(numberIndex+"");
         mutato.setProgress(kihuzva);
-        barHint.setText(kihuzva+"");
+        barHint.setText(kihuzva+"/"+NumberWinTimes.max);
 
         return convertView;
     }
